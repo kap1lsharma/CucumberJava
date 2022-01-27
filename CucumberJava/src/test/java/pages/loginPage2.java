@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class loginPage {
+public class loginPage2 {
 
 	protected WebDriver driver;
 
@@ -59,7 +59,7 @@ public class loginPage {
 
 	private By AuthTypeForToken = By.xpath("(//*[@class='slds-select'])[2]");
 
-	public loginPage(WebDriver driver) {
+	public loginPage2(WebDriver driver) {
 
 		this.driver = driver;
 
