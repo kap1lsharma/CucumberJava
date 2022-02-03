@@ -62,7 +62,7 @@ public class loginPage {
 	private By SelectSalesforceObject = By.xpath("(//*[@class='slds-input'])[2]");
 
 	// Element wizard _4
-	private By Select_Object_One_By_One = By.xpath("(//*[@class='slds-select'])[2]");
+	private By Select_Object_One_By_One = By.xpath("//*[@name=\"select1\"]");
 	private By RequiredFieldsAdd = By.xpath("(//*[@class=\"slds-button slds-button_brand btnAddRemoveCID\"])[2]");
 
 	public loginPage(WebDriver driver) {

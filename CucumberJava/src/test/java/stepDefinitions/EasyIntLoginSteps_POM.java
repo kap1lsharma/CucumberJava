@@ -14,8 +14,6 @@ public class EasyIntLoginSteps_POM {
 	WebDriver driver = null;
 	loginPage login;
 
-//	Wizard3Page wp; 
-
 	@Given("browser is open")
 	public void browser_is_open() {
 
