@@ -6,12 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
+//import pages.Wizard3Page;
 import pages.loginPage;
 
 public class EasyIntLoginSteps_POM {
 
 	WebDriver driver = null;
 	loginPage login;
+
+//	Wizard3Page wp; 
 
 	@Given("browser is open")
 	public void browser_is_open() {
@@ -50,8 +53,6 @@ public class EasyIntLoginSteps_POM {
 
 		login.clickLogin();
 
-		Thread.sleep(4000);
-
 	}
 
 	@Then("user is navigated to the home page")
@@ -61,13 +62,13 @@ public class EasyIntLoginSteps_POM {
 
 	}
 
-	@Then("user clicks on new")
-	public void user_clicks_on_new() {
+	@Then("user keeps filling details till endpointUrl and JSON")
+	public void user_keeps_filling_details_till_endpointUrl_and_JSON() {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		login.NewButton();
 
-		login.wizard_2();
+		login.APICallType();
 
 		login.ObtainAccessToken();
 
@@ -75,6 +76,11 @@ public class EasyIntLoginSteps_POM {
 
 		login.afterGettingToken();
 
+		login.PostCall();
+
+		login.Wizard_3();
+
+		login.wizard_4();
 //		login.tearDown();
 	}
 

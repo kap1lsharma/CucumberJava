@@ -6,7 +6,7 @@ Scenario Outline: Check login is successful with valid creadentials
 	When user enters <username> and <password> 
 	And user clicks on login 
 	Then user is navigated to the home page 
-	And user clicks on new 
+	And user keeps filling details till endpointUrl and JSON  
 	
 	
 	
