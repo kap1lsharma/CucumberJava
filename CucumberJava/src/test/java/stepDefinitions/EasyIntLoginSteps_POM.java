@@ -6,13 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
-//import pages.Wizard3Page;
+
 import pages.loginPage;
 
 public class EasyIntLoginSteps_POM {
 
 	WebDriver driver = null;
 	loginPage login;
+
 
 	@Given("browser is open")
 	public void browser_is_open() {
@@ -28,6 +29,7 @@ public class EasyIntLoginSteps_POM {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+
 	}
 
 	@And("user is on login page")
@@ -61,7 +63,7 @@ public class EasyIntLoginSteps_POM {
 	}
 
 	@Then("user keeps filling details till endpointUrl and JSON")
-	public void user_keeps_filling_details_till_endpointUrl_and_JSON() {
+	public void user_keeps_filling_details_till_endpointUrl_and_JSON() throws InterruptedException {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		login.NewButton();
@@ -74,11 +76,17 @@ public class EasyIntLoginSteps_POM {
 
 		login.afterGettingToken();
 
-		login.PostCall();
+		login.Call();
 
 		login.Wizard_3();
 
 		login.wizard_4();
+
+//		//Workbench class
+//				wb = new WorkBench(driver);
+//				wb.openWorkBench();
+//				
+
 //		login.tearDown();
 	}
 
